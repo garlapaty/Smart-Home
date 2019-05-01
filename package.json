@@ -10,6 +10,8 @@
     "express": "^4.16.2",
     "fusioncharts": "^3.13.4",
     "fusionmaps": "^3.13.1-sr.1",
+    "gh-pages": "^2.0.1",
+    "homepage": "https://garlapaty.github.io/Smart-Home/",
     "jsonwebtoken": "^8.1.1",
     "mongoose": "^5.0.6",
     "morgan": "^1.9.0",
@@ -29,12 +31,12 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
-     "dev": "react-scripts start",
+    "start": "node./bin/www",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "heroku-postbuild": "npm run build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1"
