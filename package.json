@@ -29,12 +29,12 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
-    
+     "dev": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-     "start": "forever -m 5 bin/www",
-    "heroku-postbuild": "cd build && npm --production=false && npm run build",
-    "dev": "concurrently \"forever -m 5 -w bin/www\" \"cd build && npm start\""
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1"
